@@ -1,2 +1,2 @@
 # CLDesk
-CLDEsk is simple Python software to view files, add sortcuts etc.
+CLDEsk is a simple Python-Program to view files, add shortcuts etc.
