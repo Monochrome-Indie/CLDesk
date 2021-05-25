@@ -1,3 +1,3 @@
-import pymenu
+from dependencies import pymenu
 
-rootModes = pymenu.menu()
+rootModes = menu()
