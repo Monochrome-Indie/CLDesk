@@ -1,4 +1,5 @@
 import os
+import glob
 
 # My custom pymenu module, I copied the code here because it is so small and i could not get it to import from the dependencies directory.
 
@@ -22,16 +23,27 @@ def show(menuName):
 rootModesMenu = menu()
 
 rootModes = {
-    "Test Option",
-    "Exit CLDesk"
+    "Exit CLDesk",
+    "View Folder"
 }
 
 
 for option in rootModes:
   itemAppend(rootModesMenu, option)
 
-rootMode = show(rootModesMenu)
+while 1:
+  rootMode = show(rootModesMenu)
 
-if rootMode == 0:
-  input("")
-  exit(0)
+  if rootMode == 0:
+    path = input("Path > ")
+
+    files = os.listdir(path)
+    for file in files:
+      if file[0] == ".":
+        pass
+      else:
+        print(file.replace(".lnk", ".(shortcut)"))
+
+
+  if rootMode == 1:
+    exit(0)
