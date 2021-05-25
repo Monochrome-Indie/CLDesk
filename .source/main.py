@@ -23,6 +23,7 @@ rootModes = {
     "testOp": "Test Option"
 }
 
-itemAppend(rootModesMenu, rootModes)
+for option in rootModes:
+    itemAppend(rootModesMenu, option)
 
 rootMode = show(rootModesMenu)
