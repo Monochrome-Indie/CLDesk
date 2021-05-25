@@ -1,3 +1,5 @@
+import os
+
 # My custom pymenu module, I copied the code here because it is so small and i could not get it to import from the dependencies directory.
 
 def menu():
@@ -20,10 +22,16 @@ def show(menuName):
 rootModesMenu = menu()
 
 rootModes = {
-    "testOp": "Test Option"
+    "Test Option",
+    "Exit CLDesk"
 }
 
+
 for option in rootModes:
-    itemAppend(rootModesMenu, option)
+  itemAppend(rootModesMenu, option)
 
 rootMode = show(rootModesMenu)
+
+if rootMode == 0:
+  input("")
+  exit(0)
