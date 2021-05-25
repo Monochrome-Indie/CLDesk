@@ -1,2 +1,2 @@
 # CLDesk
-command-line based shortcut / file handling software
+CLDEsk is simple Python software to view files, add sortcuts etc.
